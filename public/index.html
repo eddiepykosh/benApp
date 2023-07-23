@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Node.js Project</title>
+  <title>Ben</title>
   <!-- Add any necessary CSS styles here -->
 </head>
 <body>
-  <h1>Node.js Project</h1>
+  <h1>Ben</h1>
   <input type="text" id="textbox">
-  <button id="button1">Button 1</button>
-  <button id="button2">Button 2</button>
+  <button id="btnSubmit">Submit</button>
+  <button id="btnReset">Reset Text Box</button>
   
-  <!-- Add any necessary JavaScript scripts here -->
+  <script>
+    // Get references to the textbox and reset button
+    const textbox = document.getElementById('textbox');
+    const btnReset = document.getElementById('btnReset');
+
+    // Add click event listener to the reset button
+    btnReset.addEventListener('click', () => {
+      // Clear the textbox value
+      textbox.value = '';
+    },)
+
+    btnSubmit.addEventListener('click', () => {
+    const textContent = textbox.value;
+
+    // Send a GET request to the server with the content of the "textbox"
+    fetch(`/submit?textbox=${encodeURIComponent(textContent)}`)
+      .then(response => response.text())
+      .then(responseText => console.log(responseText))
+      .catch(error => console.error('Error:', error));
+
+    });
+
+  </script>
+
+  
 </body>
 </html>
