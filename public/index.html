@@ -7,9 +7,19 @@
 <body>
   <h1>Node.js Project</h1>
   <input type="text" id="textbox">
-  <button id="button1">Button 1</button>
-  <button id="button2">Button 2</button>
+  <button id="btnSubmit">Submit</button>
+  <button id="btnReset">Reset Text Box</button>
   
-  <!-- Add any necessary JavaScript scripts here -->
+  <script>
+    // Get references to the textbox and reset button
+    const textbox = document.getElementById('textbox');
+    const btnReset = document.getElementById('btnReset');
+
+    // Add click event listener to the reset button
+    btnReset.addEventListener('click', () => {
+      // Clear the textbox value
+      textbox.value = '';
+    });
+  </script>
 </body>
 </html>
