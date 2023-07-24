@@ -1,5 +1,7 @@
 // server.js
 
+require('dotenv').config(); // Load environment variables from .env file
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -7,8 +9,8 @@ const bcrypt = require('bcrypt');
 const handleSubmission = require('./submitHandler'); // Import the submitHandler.js file
 
 const saltRounds = 10;
-const username = 'username'; // Replace with your desired username
-const password = 'password'; // Replace with your desired password (preferably use bcrypt hash)
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
 
 // Middleware to check for authentication
 function authenticate(req, res, next) {
