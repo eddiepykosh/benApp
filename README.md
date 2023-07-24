@@ -3,9 +3,13 @@
 # Features
 - Password protection so you can control who uses the website
 
+# How to use/build
+- Step 1: You don't
+  - (Come back later)
+
 # More info to come later
 - Current Todo:
-  - phone number parsing
+  - Phone number parsing
     - Actually a priority to stop abuse
   - Actually implement the ben sounds
   - Redo the front end
