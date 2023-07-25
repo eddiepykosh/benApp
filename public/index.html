@@ -93,7 +93,7 @@
 
     const radioButtons = document.querySelectorAll('input[type="radio"]');
     const submitButton = document.getElementById('btnSubmit');
-
+    
     // Add an event listener to each radio button
     radioButtons.forEach((radioButton) => {
       radioButton.addEventListener('change', () => {
@@ -108,7 +108,9 @@
     // Add click event listener to the reset button
     btnReset.addEventListener('click', () => {
       // Clear the textbox value
-      textbox.value = '';
+      // textbox.value = '';
+      document.querySelector('form').reset();
+      submitButton.disabled = true;
     },)
 
     btnSubmit.addEventListener('click', () => {
@@ -120,6 +122,7 @@
       .then(responseText => console.log(responseText))
       .catch(error => console.error('Error:', error));
 
+    document.querySelector('form').reset();
     });
 
   </script>
