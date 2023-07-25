@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bcrypt = require('bcrypt');
-const handleSubmission = require('./submitHandler'); // Import the submitHandler.js file
+const { handleSubmission, getSelectedRadioButton } = require('./submitHandler'); // Import both functions
 
 const saltRounds = 10;
 const username = process.env.USERNAME;
@@ -42,9 +42,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Handle the "btnSubmit" form submission
 app.get('/submit', (req, res) => {
   const textboxContent = req.query.textbox; // Get the value of "textbox" from the request query string
-
+  // Get the selected radio button value using the new function
+  const selectedRadioValue = getSelectedRadioButton(req);
   // Pass the 'req' object to the handleSubmission function
-  handleSubmission(textboxContent, req);
+  handleSubmission(textboxContent, req, selectedRadioValue);
 
   res.send('Submission received.'); // Send a response back to the client
 });
