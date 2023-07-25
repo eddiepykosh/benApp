@@ -1,16 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ben</title>
-  <!-- Add any necessary CSS styles here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-end Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .radio-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .radio-label {
+      margin-left: 10px;
+    }
+    img {
+      max-width: 30px;
+      max-height: 30px;
+      margin-right: 5px;
+    }
+    #btnSubmit, #btnReset {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #btnSubmit {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #btnReset {
+      background-color: #f44336;
+      color: white;
+    }
+    #btnSubmit[disabled] {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 <body>
   <h1>Ben</h1>
-  <input type="text" id="textbox">
-  <button id="btnSubmit">Submit</button>
-  <button id="btnReset">Reset Text Box</button>
-  
+  <div class="container">
+    <form>
+      <div class="radio-option">
+        <input type="radio" name="Ben" id="radioBen">
+        <label for="radioBen"><img src="image_placeholder1.jpg" alt="Ben"> Ben</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="Huh huh huhhhh" id="radioLaugh">
+        <label for="radioLaugh"><img src="image_placeholder2.jpg" alt="Huh huh huhhhh"> Huh huh huhhhh</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="No" id="radioNo">
+        <label for="radioNo"><img src="image_placeholder3.jpg" alt="No."> No.</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="Yesssss" id="radioYes">
+        <label for="radioYes"><img src="image_placeholder4.jpg" alt="Yesssss"> Yesssss</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="Grrr" id="radioGrunt">
+        <label for="radioGrunt"><img src="image_placeholder5.jpg" alt="Grrr"> Grrr</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="Random" id="radioRandom">
+        <label for="radioRandom"><img src="image_placeholder6.jpg" alt="Random"> Random</label>
+      </div>
+  <input type="text" id="textbox" placeholder="Enter your text here">
+      <br>
+      <button type="submit" id="btnSubmit" disabled>Submit</button>
+      <button type="reset" id="btnReset">Reset</button>
+  </form>
+  </div>
   <script>
+
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    const submitButton = document.getElementById('btnSubmit');
+
+    // Add an event listener to each radio button
+    radioButtons.forEach((radioButton) => {
+      radioButton.addEventListener('change', () => {
+        // Enable the "Submit" button if any radio button is selected
+        submitButton.disabled = false;
+      });
+    });
     // Get references to the textbox and reset button
     const textbox = document.getElementById('textbox');
     const btnReset = document.getElementById('btnReset');
