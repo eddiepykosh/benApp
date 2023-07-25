@@ -9,10 +9,10 @@
 
 # More info to come later
 - Current Todo:
-  - Phone number parsing
-    - Actually a priority to stop abuse
+  - ~~Phone number parsing~~
+    - ~~Actually a priority to stop abuse~~
   - Actually implement the ben sounds
-  - Redo the front end
+  - ~~Redo the front end~~
   - Password hashing
   - Dockerize
   - .ENV stuff???
