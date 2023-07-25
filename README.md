@@ -17,3 +17,4 @@
   - Dockerize
   - .ENV stuff???
   - get rid of helloworld.js
+  - add real logging to a file
