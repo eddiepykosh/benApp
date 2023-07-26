@@ -60,23 +60,15 @@ services:
 # Disclaimer Jargon
 **TLDR; This is a fun thing to use to mess with friends but don't be an idiot.** 
 
-This GitHub repository contains code and instructions to set up a server and use it for specific purposes. It is important to understand that this application is provided "as-is," without warranties or guarantees of any kind.
+This project and its associated code are provided for educational and informational purposes only. The code is not intended to be used in a production environment, and I make no warranties or guarantees about its functionality, security, or reliability.
 
-I, ss the creator and maintainer of this repository, am not responsible for any harm, damages, or consequences resulting from the use of this code. The code provided here may interact with other systems, services, or APIs, and any usage, modification, or implementation of this code is entirely at your own risk.
+I am not responsible for any consequences or damages resulting from the use of this code, including but not limited to any actions taken based on the information or code provided. It is your responsibility to review and understand the code before using it and to use it responsibly and at your own risk.
 
-Before deploying and using this server, I strongly advise you to review the code, understand its functionality, and ensure that it aligns with your intended use. Additionally, you should consider any legal and ethical implications associated with its use.
+Please use this code responsibly and be mindful of potential risks and security concerns. By using this code, you agree to assume all responsibility for its use and any potential consequences that may arise.
 
-This application may process or transmit sensitive data, interact with third-party services, or perform other actions that could have security or privacy implications. It is your responsibility to implement appropriate security measures and comply with any relevant laws and regulations.
+Remember, always exercise caution and best practices when using code from external sources, and never use it for any malicious or harmful purposes.
 
-In no event shall I be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use this code.
-
-By setting up and using this server, you acknowledge and agree to the terms of this disclaimer. If you do not agree with these terms, refrain from using or deploying this code.
-
-Please think responsibly and exercise caution when setting up and using this server. If you have any doubts or concerns about its usage or implementation, seek advice from a qualified professional or refrain from using it altogether.
-
-Remember, the responsibility for the proper use and consequences of this code lies solely with the user.
-
-Thank you for your understanding.
+Thank you!
 
 
 # License Stuff
