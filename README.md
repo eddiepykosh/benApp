@@ -7,10 +7,10 @@
 # What you'll need
 - A Twilio API subscription with a phone number from Twilio
   - [Creating an Account](https://www.twilio.com/docs/messaging/build-your-account)
-- Some basic Docker and Node.js understand
- - Or just ask ChatGPT like I did for 90% of this
+- Some basic Docker and Node.js understanding
+  - Or just ask ChatGPT like I did for 90% of this
 - A will to live
- - Sadly ChatGPT does not provide that    
+  - Sadly ChatGPT does not provide that    
 
 # How to use/build
 - Pull down the latest Docker Image from https://hub.docker.com/r/eddiepykosh/thebenapp
@@ -35,7 +35,7 @@ services:
 # Things to Know
 - You're REALLY gonna want to set a good username and password for this or else you'll be bankrupt to Twilio if someone finds it on the public internet
 - Be default the server binds to 0.0.0.0 (all addresses) and port 3000 in server.js
- - Todo: Make them env values
+  - Todo: Make those env values
 
 # FAQ
 - Why did you make this?
@@ -58,7 +58,7 @@ services:
   - add real logging to a file
 
 # Disclaimer Jargon
-TLDR; This is a fun thing to use to mess with friends but don't be an idiot.
+**TLDR; This is a fun thing to use to mess with friends but don't be an idiot.** 
 
 This GitHub repository contains code and instructions to set up a server and use it for specific purposes. It is important to understand that this application is provided "as-is," without warranties or guarantees of any kind.
 
