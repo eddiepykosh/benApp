@@ -60,27 +60,27 @@
   <div class="container">
     <form>
       <div class="radio-option">
-        <input type="radio" name="Ben" id="radioBen" value="optionBen">
+        <input type="radio" name="radioOptions" id="radioBen" value="optionBen">
         <label for="radioBen"><img src="https://i.imgur.com/oKfNOca.png" alt="Ben"></label>
       </div>
       <div class="radio-option">
-        <input type="radio" name="Huh huh huhhhh" id="radioLaugh" value="optionLaugh">
+        <input type="radio" name="radioOptions" id="radioLaugh" value="optionLaugh">
         <label for="radioLaugh"><img src="https://media.tenor.com/agrQMQjQTzgAAAAd/talking-ben-laugh.gif" alt="Huh huh huhhhh"></label>
       </div>
       <div class="radio-option">
-        <input type="radio" name="No" id="radioNo" value="optionNo">
+        <input type="radio" name="radioOptions" id="radioNo" value="optionNo">
         <label for="radioNo"><img src="https://media.tenor.com/uvcES2Nedr0AAAAd/talking-ben-no.gif" alt="No."></label>
       </div>
       <div class="radio-option">
-        <input type="radio" name="Yesssss" id="radioYes" value="optionYes">
+        <input type="radio" name="radioOptions" id="radioYes" value="optionYes">
         <label for="radioYes"><img src="https://media.tenor.com/2LMV1vTX15EAAAAC/talking-ben-yes.gif" alt="Yesssss"></label>
       </div>
       <div class="radio-option">
-        <input type="radio" name="Grrr" id="radioGrunt" value="optionGrunt">
+        <input type="radio" name="radioOptions" id="radioGrunt" value="optionGrunt">
         <label for="radioGrunt"><img src="https://media.tenor.com/fr6i8VzKJuEAAAAd/talking-ben-ugh.gif" alt="Grrr"></label>
       </div>
       <div class="radio-option">
-        <input type="radio" name="Random" id="radioRandom" value="optionRandom">
+        <input type="radio" name="radioOptions" id="radioRandom" value="optionRandom">
         <label for="radioRandom"> Random</label>
       </div>
   <input type="text" id="textbox" placeholder="Enter your phone number here">
@@ -126,6 +126,7 @@
       .catch(error => console.error('Error:', error));
 
     document.querySelector('form').reset();
+    submitButton.disabled = true;
     });
 
   </script>
