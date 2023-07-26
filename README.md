@@ -1,7 +1,8 @@
 # An idiotic project that calls people with sound bites from that [Talking Ben](https://apps.apple.com/us/app/talking-ben-the-dog/id416345319) meme.
 
 # Features
-- Password protection so you can control who uses the website
+- The power to annoy the hell out of your friends.
+- Password protection so you can control who uses the website.
 
 # What you'll need
 - A Twilio API subscription with a phone number from Twilio
