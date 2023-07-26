@@ -28,25 +28,33 @@ function handleSubmission(text, req) {
   }
 
   const selectedRadioValue = getSelectedRadioButton(req);
+  let soundURL;
 
   // Check the selected radio button value and perform actions accordingly
   if (selectedRadioValue === 'optionBen') {
     // Handle the "Ben" option
     console.log('Selected option: Ben');
-    // Add your logic here for the "Ben" option
+    soundURL = 'https://files.pykosh.com/files/ben%20files/ben_generic.mp3';
+
   } else if (selectedRadioValue === 'optionLaugh') {
     console.log('Selected option: Huh huh huhhhh');
+    soundURL = 'https://files.pykosh.com/files/ben%20files/ben_laugh.mp3';
 
   } else if (selectedRadioValue === 'optionNo') {
     console.log('Selected option: No');
+    soundURL = 'https://files.pykosh.com/files/ben%20files/ben_no.mp3';
 
   } else if (selectedRadioValue === 'optionYes') {
     console.log('Selected option: Yesssss');
+    soundURL = 'https://files.pykosh.com/files/ben%20files/ben_yes.mp3';
+
   } else if (selectedRadioValue === 'optionGrunt') {
     console.log('Selected option: Grrr');
+    soundURL = 'https://files.pykosh.com/files/ben%20files/ben_grunt.mp3';
 
   } else if (selectedRadioValue === 'optionRandom') {
     console.log('Selected option: Random');
+    soundURL = 'http://demo.twilio.com/docs/classic.mp3';
 
   } else {
     // Handle cases where the selectedRadioValue does not match any known option
@@ -54,16 +62,16 @@ function handleSubmission(text, req) {
   }
 
   // You can add any other server-side logic here if needed
-  /*
+  
   client.calls
     .create({
-      url: 'http://demo.twilio.com/docs/classic.mp3',
+      url: soundURL,
       from: phoneNumber,
       to: text,
       method: 'GET'
     })
     .then(call => console.log(call.sid));
-  */
+  
 }
 
 module.exports = {
