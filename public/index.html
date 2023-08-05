@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Front-end Website</title>
+  <title>Ben</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -53,6 +53,26 @@
       color: #666;
       cursor: not-allowed;
     }
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  .container {
+    border-color: #444;
+  }
+  #btnSubmit {
+    background-color: #1e7e34;
+  }
+  #btnReset {
+    background-color: #c62828;
+  }
+  #btnSubmit[disabled] {
+    background-color: #444;
+    color: #888;
+  }
+}
   </style>
 </head>
 <body>

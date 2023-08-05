@@ -52,7 +52,7 @@ app.get('/submit', (req, res) => {
 
 
 // Start the server and bind it to your desired IP address
-const port = 3000;
+const port = 2360;
 const ip = '0.0.0.0'; // Replace 'your_desired_ip_here' with your desired IP address
 app.listen(port, ip, () => {
   console.log(`Server is running on http://${ip}:${port}`);
