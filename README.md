@@ -20,7 +20,7 @@
 version: '3.9'
 services:
     benapp:
-        image: 'eddiepykosh/thebenapp:v0.21'
+        image: 'eddiepykosh/thebenapp:latest'
         environment:
         - USERNAME=<username>
         - PASSWORD=<password>
@@ -34,8 +34,8 @@ services:
 
 # Things to Know
 - You're REALLY gonna want to set a good username and password for this or else you'll be bankrupt to Twilio if someone finds it on the public internet
-- Be default the server binds to 0.0.0.0 (all addresses) and port 3000 in server.js
-  - Todo: Make those env values
+- Be default the server binds to 0.0.0.0 (all addresses) and port 2360 (Aka Ben0 in T9) in server.js
+- Because of the regex currently in use, this only works on 10 digit US phone numbers but in theory could work in other countries.
 
 # FAQ
 - Why did you make this?
@@ -45,17 +45,6 @@ services:
 - Should I trust you?
   - Absolutely not.   
 
-# More info to come later
-- Current Todo:
-  - ~~Phone number parsing~~
-    - ~~Actually a priority to stop abuse~~
-  - ~~Actually implement the ben sounds~~
-  - ~~Redo the front end~~
-  - Password hashing
-  - ~~Dockerize~~
-  - .ENV stuff???
-  - get rid of helloworld.js
-  - add real logging to a file
 
 # Disclaimer Jargon
 **TLDR; This is a fun thing to use to mess with friends but don't be an idiot.** 
