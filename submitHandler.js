@@ -15,7 +15,7 @@ function handleSubmission(text, req) {
   console.log('Textbox content:', text);
 
   // Get the requester's IP address from the request object
-  const ipAddress = req.ip;
+  const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log('Requester IP Address:', ipAddress);
 
   // Regular expression to validate 10-digit phone numbers
