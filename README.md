@@ -28,7 +28,7 @@ services:
         - TWILIO_AUTH_TOKEN=<Token>
         - TWILIO_PHONE_NUMBER=+<Phone Number from Twilio>
         ports:
-            - '3000:3000'
+            - '2360:2360'
 ```
 - Or you can clone this Repo, setup your .env stuff and run server.js
 
