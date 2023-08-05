@@ -10,7 +10,7 @@ function getSelectedRadioButton(req) {
   return selectedRadio;
 }
 // This function will be called when the "btnSubmit" button is clicked
-function handleSubmission(text, req) {
+function handleSubmission(text, req, selectedRadioValue, res) {
   // Log the content of the "textbox" to the console
   console.log('Textbox content:', text);
 
@@ -23,11 +23,12 @@ function handleSubmission(text, req) {
 
   // Check if the input text matches the phone number format
   if (!phoneRegex.test(text)) {
-    console.log('Invalid phone number. Please enter a 10-digit number.');
-    return; // Exit the function if the phone number is invalid
+    console.log('Bad number');
+    res.status(400).json({ error: 'Invalid phone number. Please enter a 10-digit number in the following format: 2675551234' });
+    return true; // Exit the function if the phone number is invalid
   }
-
-  const selectedRadioValue = getSelectedRadioButton(req);
+  
+  //const selectedRadioValue = getSelectedRadioButton(req);
   let soundURL;
 
   // Check the selected radio button value and perform actions accordingly

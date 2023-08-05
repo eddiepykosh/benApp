@@ -140,13 +140,24 @@
     const selectedRadioValue = selectedRadio.value;
 
     // Send a GET request to the server with the content of the "textbox"
+    // When the form is submitted
     fetch(`/submit?textbox=${encodeURIComponent(textContent)}&radio=${encodeURIComponent(selectedRadioValue)}`)
-      .then(response => response.text())
-      .then(responseText => console.log(responseText))
+      .then(response => response.json()) // Assume the server returns JSON
+      .then(data => {
+        if (data.error) {
+          // Handle the error, e.g., show an alert or custom popup
+          alert(data.error);
+        } else {
+          // Handle success (e.g., log response or update the UI)
+          alert('Ben submitted');
+          console.log(data);
+        }
+      })
       .catch(error => console.error('Error:', error));
 
-    document.querySelector('form').reset();
-    submitButton.disabled = true;
+      document.querySelector('form').reset();
+      submitButton.disabled = true;
+
     });
 
   </script>

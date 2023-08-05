@@ -45,9 +45,10 @@ app.get('/submit', (req, res) => {
   // Get the selected radio button value using the new function
   const selectedRadioValue = getSelectedRadioButton(req);
   // Pass the 'req' object to the handleSubmission function
-  handleSubmission(textboxContent, req, selectedRadioValue);
+  const isInvalid = handleSubmission(textboxContent, req, selectedRadioValue, res);
+  if (isInvalid) return;
 
-  res.send('Submission received.'); // Send a response back to the client
+  res.json({ message: 'Submission received.' }); // Send a response back to the client
 });
 
 
