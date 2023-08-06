@@ -56,6 +56,6 @@ app.get('/submit', (req, res) => {
 const port = 2360;
 const ip = '0.0.0.0'; // Replace 'your_desired_ip_here' with your desired IP address
 app.listen(port, ip, () => {
-  console.log(`Server is running on http://${ip}:${port}`);
+  console.log(new Date().toISOString() + ' - ' + `Server is running on http://${ip}:${port}`);
 });
 

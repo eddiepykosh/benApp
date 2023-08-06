@@ -36,6 +36,7 @@ services:
 - You're REALLY gonna want to set a good username and password for this or else you'll be bankrupt to Twilio if someone finds it on the public internet
 - Be default the server binds to 0.0.0.0 (all addresses) and port 2360 (Aka Ben0 in T9) in server.js
 - Because of the regex currently in use, this only works on 10 digit US phone numbers but in theory could work in other countries.
+- I handle SSL at the reverse proxy level so SSL is not included in this project.
 
 # FAQ
 - Why did you make this?
