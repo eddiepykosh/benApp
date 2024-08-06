@@ -53,9 +53,9 @@ function handleSubmission(text, req, selectedRadioValue, res) {
     console.log(new Date().toISOString() + ' - ' + 'Selected option: Grrr');
     soundURL = 'https://files.pykosh.com/files/ben%20files/ben_grunt.mp3';
 
-  } else if (selectedRadioValue === 'optionRandom') {
-    console.log(new Date().toISOString() + ' - ' + 'Selected option: Random');
-    soundURL = 'https://files.pykosh.com/files/ben%20files/moon_river_chorus.mp3';
+  } else if (selectedRadioValue === 'optionSharon') {
+    console.log(new Date().toISOString() + ' - ' + 'Selected option: Sharon');
+    soundURL = 'https://files.pykosh.com/files/ben%20files/sharon.mp3';
 
   } else {
     // Handle cases where the selectedRadioValue does not match any known option
